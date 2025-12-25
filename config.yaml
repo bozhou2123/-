@@ -1,0 +1,31 @@
+# API配置
+api:
+  licence: "C6CA8FF4-C49B-4B18-813E-E1D505767052"
+  base_url: "https://api.mairuiapi.com"
+  endpoints:
+    history: "/hsstock/history"
+    instrument: "/hsstock/instrument"
+
+# 数据配置
+data:
+  stock_list: "data/raw/自选股.xlsx"
+  start_date: "20240101"
+  update_frequency: "daily"  # daily, weekly, monthly
+  
+# 分析配置
+analysis:
+  pca_variance_ratio: 0.95
+  max_clusters: 10
+  granger_lags: 5
+  correlation_threshold: 0.7
+  
+# 输出配置
+output:
+  charts_dir: "output/charts"
+  reports_dir: "output/reports"
+  html_dir: "docs"
+  
+# 调度配置
+schedule:
+  time_zone: "Asia/Shanghai"
+  run_time: "16:00"  # 每天收盘后运行
